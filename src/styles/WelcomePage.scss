@@ -1,0 +1,24 @@
+@use "variables.scss" as variables;
+
+.welcome-page {
+  &__container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(270deg, #095379 8%, #3d92a3 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: map-get(variables.$colors, font-white);
+
+    button {
+      margin-top: 40px;
+      color: map-get(variables.$colors, font-white);
+      border-color: white;
+
+      &:hover {
+        background: rgba(211, 211, 211, 0.24);
+      }
+    }
+  }
+}

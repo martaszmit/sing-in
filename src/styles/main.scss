@@ -1,0 +1,10 @@
+.blue-container {
+  z-index: 1;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(9,83,121,1) 8%, rgba(61,146,163,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

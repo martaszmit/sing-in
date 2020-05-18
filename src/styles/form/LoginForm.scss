@@ -1,0 +1,77 @@
+@use "src/styles/variables" as variables;
+
+.login {
+
+  &__background--blurred {
+    filter: blur(2px);
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-container {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+
+    * {
+      margin: 10px 0;
+    }
+  }
+
+  &__invalid-user-container {
+    width: 100%;
+    height: 0;
+    background-color: map-get(variables.$colors, background-white);
+    border-radius: 4px;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.5s ease;
+    overflow: hidden;
+
+    &--visible {
+      transition: height 0.3s ease;
+      height: 65px;
+    }
+  }
+
+  &__invalid-user-elements {
+    transition: all 0.5s ease;
+    align-items: center;
+
+    span {
+      text-decoration: underline;
+      cursor: pointer;
+      margin-left: 5px;
+      color: map-get(variables.$colors, form-input-color);
+    }
+
+    .MuiSvgIcon-root:hover {
+      cursor: pointer;
+    }
+    .MuiAlert-icon {
+      align-self: center;
+    }
+
+  }
+
+  &__loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .MuiCircularProgress-colorPrimary {
+      color: map-get(variables.$colors, form-input-color );
+    }
+  }
+}

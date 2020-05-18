@@ -1,0 +1,29 @@
+@use "src/styles/variables" as variables;
+
+.form-input {
+  &__container {
+    .MuiOutlinedInput-root {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: map-get(variables.$colors, form-input-color);
+      };
+      &.Mui-focused fieldset {
+        border-color: map-get(variables.$colors, form-input-color);
+      }
+    }
+
+    .MuiFormLabel-root.Mui-focused {
+      color: map-get(variables.$colors, form-input-color);
+    }
+
+    .MuiFormHelperText-root {
+      transform: translateY(-10px);
+      color: map-get(variables.$colors, error)
+    }
+
+    .MuiIconButton-root {
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}

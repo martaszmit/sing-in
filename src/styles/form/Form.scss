@@ -1,0 +1,25 @@
+@use '../variables' as variables;
+
+.form {
+  &__container {
+    background-color: map-get(variables.$colors, 'background-white');
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__action {
+    width: 100%;
+    .MuiButtonBase-root {
+      width: 100%;
+      color: map-get(variables.$colors, form-input-color);
+      border-color: map-get(variables.$colors, form-input-color);
+      &:hover {
+        border: 1px solid black;
+      }
+    }
+  }
+}
